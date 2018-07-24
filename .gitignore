@@ -1,6 +1,6 @@
 ########FILE##########
-*.pro.user
+.pro.user
 
 ########DIR#########
-/build-
+.build-/
 
