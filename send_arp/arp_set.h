@@ -1,5 +1,9 @@
+#include<libnet.h>
+#include<pcap.h>
 #ifndef ETH_ARP_H
 #define ETH_ARP_H
+#define REQUEST 1
+#define REPLY 2
 #pragma pack(push,1)
 struct send_arp_packet
 {
@@ -17,4 +21,5 @@ struct send_arp_packet
     uint32_t target_ip;                 /*target ip address*/
 };
 #pragma pack(pop)
+void send_arp(char *snd_ip, uint8_t *snd_mac, char *trg_ip, uint8_t *trg_mac, int op, pcap_t *fp);
 #endif // ETH_ARP_H
